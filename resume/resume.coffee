@@ -13,10 +13,8 @@ class PlaceWorked extends StarRecord
     length: 50
 
   startYear: Year.field
+    length:5
   endYear: Year.field
+    length:5
 
-
-class Year extends TextField
-  validation:
-    RegExp: '^[0-9]' #numbers only
 
