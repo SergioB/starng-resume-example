@@ -1,7 +1,7 @@
 class Resume extends StarRecord
   intro: Text.field
     length: 500
-  languagesSpoken: Text.field
+  languagesSpoken: StarField.field
     length: 200
   placesWorked: ManyToOne.to PlaceWorked
 
