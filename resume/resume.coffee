@@ -1,7 +1,7 @@
 class @Resume extends StarRecord
   intro: Text.field
     length: 500
-  languagesSpoken: StarField.field
+  languagesSpoken: Text.field
     length: 200
 #  placesWorked: ManyToOne.to PlaceWorked
 #    maxNumber: 30
