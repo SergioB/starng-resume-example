@@ -1,14 +1,17 @@
 class @Resume extends StarRecord
   name: Text.field
-    maxLength: 100
-    minLength: 3
-    notEmpty: true
+    max: 100
+    min: 3
+    validator: Validators.createValidator "No Agents Smith allowed", (value)-> # custom validator
+      value=="Agent Smith"
 
   intro: Text.field
-    length: 500
+    max: 10
+    optional: true
 
   languagesSpoken: Text.field
-    length: 200
+    max: 200
+    min: 3
     label: "Language Spoken"
 #  placesWorked: ManyToOne.to PlaceWorked
 #    maxNumber: 30
@@ -16,9 +19,10 @@ class @Resume extends StarRecord
 
 class PlaceWorked extends StarRecord
   name: Text.field
-    length: 100
+    max: 100
+    min: 3
   position: Text.field
-    length: 50
+    max: 50
 
   startYear: Year.field
     length:5
