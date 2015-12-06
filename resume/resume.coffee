@@ -13,8 +13,15 @@ class @Resume extends StarRecord
     max: 200
     min: 3
     label: "Language Spoken"
+
+  password: Password.field
+    label: "Password"
+
 #  placesWorked: ManyToOne.to PlaceWorked
 #    maxNumber: 30
+  hooks:
+    afterSave: ()->
+      Accounts.createUser(@name.value, @email.value, @password.value)
 
 
 class PlaceWorked extends StarRecord
