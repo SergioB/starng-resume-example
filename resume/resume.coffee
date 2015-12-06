@@ -14,6 +14,9 @@ class @Resume extends StarRecord
     min: 3
     label: "Language Spoken"
 
+  email: Email.field
+    label: "Email"
+
   password: Password.field
     label: "Password"
 
