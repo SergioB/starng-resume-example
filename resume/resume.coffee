@@ -22,8 +22,20 @@ class @Resume extends StarRecord
 
 #  placesWorked: ManyToOne.to PlaceWorked
 #    maxNumber: 30
+
+  forms:
+    default:
+      fields: ['name', 'intro', 'languagesSpoken']
+
+    register:
+      fields: ['name', 'email', 'password']
+
+    editProfile:
+      fields: ['name', 'intro', 'languagesSpoken', 'email', 'password']
+
   hooks:
-    afterSave: ()->
+    # after insert is called after actual object was inserted, but before calling invokers callback, after save
+    afterInsert: (error)->
       Accounts.createUser(@name.value, @email.value, @password.value)
 
 
