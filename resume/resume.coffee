@@ -23,10 +23,10 @@ class @Resume extends StarRecord
 #  placesWorked: ManyToOne.to PlaceWorked
 #    maxNumber: 30
 
-#  forms:
-#    default:
-#      fields: ['name', 'intro', 'languagesSpoken']
-#
+  forms:
+    default:
+      fields: ['name', 'intro', 'languagesSpoken']
+
 #    register:
 #      fields: ['name', 'email', 'password']
 #
