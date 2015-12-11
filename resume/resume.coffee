@@ -7,6 +7,7 @@ class @Resume extends StarRecord
 
   intro: Text.field
     max: 10
+    height: 5
     optional: true
 
   languagesSpoken: Text.field
